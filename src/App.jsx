@@ -36,6 +36,7 @@ import NavBar from "./components/navbar/NavBar.jsx";
 import HeroSection from "./components/heroSection/HeroSection.jsx";
 import NasaApproved from "./components/acknowledge/NasaApproved.jsx";
 import FeatureSection from "./components/featureSection/FeatureSection.jsx";
+import CodeEditor from "./components/codeEditor/CodeEditor.jsx";
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -55,6 +56,7 @@ function App() {
         {/* <FeatureSection /> */}
 
         <NasaApproved />
+        <CodeEditor/>
       </div>
     </>
   );
