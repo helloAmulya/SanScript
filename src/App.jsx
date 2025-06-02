@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import "./App.css";
@@ -10,6 +10,10 @@ import FeatureSection from "./components/featureSection/FeatureSection.jsx";
 import CodeEditor from "./components/codeEditor/CodeEditor.jsx";
 
 function App() {
+  const codeEditorRef = useRef(null);
+  const scrollToEditor = () => {
+    codeEditorRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   const { scrollYProgress } = useScroll();
 
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
@@ -21,14 +25,16 @@ function App() {
         <NavBar />
 
         <motion.div style={{ opacity, scale }}>
-          <HeroSection />
+          <HeroSection onTryClick={scrollToEditor} />
         </motion.div>
 
-        {/* <FeatureSection /> */}
+        <FeatureSection />
 
-        <NasaApproved />
-
-        <section className="py-20 px-4 relative">
+        <section
+          className="py-20 px-4 relative"
+          ref={codeEditorRef}
+          id="code-editor"
+        >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-cyan-600/10 blur-3xl"></div>
           <div className="max-w-6xl mx-auto relative z-10">
             <motion.div
@@ -50,6 +56,8 @@ function App() {
             <CodeEditor />
           </div>
         </section>
+
+        <NasaApproved />
       </div>
     </>
   );

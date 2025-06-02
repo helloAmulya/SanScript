@@ -115,16 +115,14 @@
 
 // export default HeroSection;
 
-
-
-
 import React from "react";
+
 import { motion } from "framer-motion";
 import { Sparkles, Zap } from "lucide-react";
 import AnimatedText from "../AnimatedText.jsx"; // Ensure this component handles its own text animation with Framer Motion internally
 import { CodeSandboxLogoIcon, Link1Icon } from "@radix-ui/react-icons";
 
-function HeroSection() {
+function HeroSection({ onTryClick }) {
   return (
     <section className="min-h-screen flex items-start justify-center px-4 pt-20 relative overflow-hidden">
       {/* bg blur effect - These are purely CSS animations and are fine as is */}
@@ -189,7 +187,17 @@ function HeroSection() {
             className="flex items-center gap-2 bg-[#1E685F] text-white hover:bg-[#207E73] px-6 py-2 rounded-full text-base font-medium backdrop-blur-md transition-all duration-300 shadow-md hover:shadow-[#12A594]"
           >
             <CodeSandboxLogoIcon className="w-5 h-5" />
-            <span>Try Sanskrit Code</span>
+            {/* <span>Try Sanskrit Code</span> */}
+            <a
+              href="#code-editor"
+              onClick={(e) => {
+                e.preventDefault();
+                onTryClick();
+              }}
+              className="  text-white  transition"
+            >
+              Try Sanskrit Code
+            </a>
           </motion.button>
 
           {/* Outlined style button */}
@@ -205,7 +213,7 @@ function HeroSection() {
         </div>
 
         {/* Code Preview Animation - Correctly animated with motion.div */}
-         <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 50, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1, delay: 1.4 }} // Starts after buttons
@@ -225,9 +233,14 @@ function HeroSection() {
             </div>
             <pre className="text-left text-sm md:text-base overflow-x-auto">
               <code className="text-gray-300">
-                <span className="text-blue-400">प्रकार्यम्</span> <span className="text-cyan-400">मुख्यम्</span>() {`{`}<br/>
-                &nbsp;&nbsp;<span className="text-teal-400">प्रिंट</span>(<span className="text-green-400">"नमस्ते विश्व!"</span>);<br/>
-                &nbsp;&nbsp;<span className="text-purple-400">वापसी</span> <span className="text-yellow-400">०</span>;<br/>
+                <span className="text-blue-400">प्रकार्यम्</span>{" "}
+                <span className="text-cyan-400">मुख्यम्</span>() {`{`}
+                <br />
+                &nbsp;&nbsp;<span className="text-teal-400">प्रिंट</span>(
+                <span className="text-green-400">"नमस्ते विश्व!"</span>);
+                <br />
+                &nbsp;&nbsp;<span className="text-purple-400">वापसी</span>{" "}
+                <span className="text-yellow-400">०</span>;<br />
                 {`}`}
               </code>
             </pre>

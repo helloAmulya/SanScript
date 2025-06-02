@@ -1,11 +1,11 @@
-import { motion } from "framer-motion";
 import React from "react";
+import { motion } from "framer-motion";
 
-function NasaApproved() {
+const SanSatire = () => {
   return (
     // <section className="bg-[#0b0c10] text-gray-200 py-16 px-6 md:px-20 border-t border-gray-700">
     <section className="bg-transparent text-gray-200 py-6 px-6 md:px-20 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-800/10 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-800/10 to-transparent"></div>
 
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -88,10 +88,14 @@ function NasaApproved() {
               View NASA Paper (Time Machine Required)
             </button>
           </div>
+
+         
         </article>
+
+       
       </motion.div>
     </section>
   );
-}
+};
 
-export default NasaApproved;
+export default SanSatire;
