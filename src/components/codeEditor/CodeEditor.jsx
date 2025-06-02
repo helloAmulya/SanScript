@@ -310,7 +310,7 @@ Process finished. Exit code: 0`);
             <button
               onClick={runCode}
               disabled={isRunning}
-              className="flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white rounded-md"
+              className="flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-[]-500 via-blue-500  to-[]-500 hover:from-[]-600 hover:via-green-600 hover:to-[]-600 text-white rounded-md"
             >
               {isRunning ? (
                 <motion.div

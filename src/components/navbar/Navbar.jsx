@@ -19,15 +19,17 @@ function NavBar() {
         {" "}
         <div className="flex justify-between py-4 h-16 items-center ">
           {" "}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2"               onClick={() => (window.location.href = "/")}
+>
             {" "}
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg flex items-center justify-center text-black font-bold">
+            <div
+              className="w-8 h-8 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg flex items-center justify-center text-black font-bold"
+            >
               {" "}
               ॐ{" "}
             </div>{" "}
             <span className="text-xl font-bold">संस्कृतम्</span>{" "}
           </div>{" "}
-
           {/* desktop menu */}{" "}
           <div className="hidden md:flex items-center space-x-8 text-[16px] mr-6">
             {" "}
@@ -61,7 +63,6 @@ function NavBar() {
             </button>{" "}
           </div>{" "}
           {/* desktop div end */}{" "}
-
           <button
             className="md:hidden text-white right-0"
             onClick={() => setIsOpen(!isOpen)}
@@ -72,17 +73,16 @@ function NavBar() {
             ) : (
               <HamburgerMenuIcon className="w-6 h-6" />
             )}{" "}
-          </button>
-          {" "}
-        </div>
-        {" "}
+          </button>{" "}
+        </div>{" "}
         {/* mobile menu */}
         {isOpen && (
           <motion.div
-           initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-          className="md:hidden fixed right-0 w-40 h-full bg-[#0B0F11]/80 backdrop-blur-xl p-6 z-50 transition-all duration-300 ease-in-out">
+            className="md:hidden fixed right-0 w-40 h-full bg-[#0B0F11]/80 backdrop-blur-xl p-6 z-50 transition-all duration-300 ease-in-out"
+          >
             {" "}
             <div className="flex flex-col items-start space-y-4 text-left">
               {" "}
