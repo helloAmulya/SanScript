@@ -5,8 +5,13 @@ import {
   Cross2Icon,
 } from "@radix-ui/react-icons";
 import { motion } from "framer-motion";
-function NavBar() {
+import { useNavigate } from "react-router-dom";
+
+function NavBar({ onFeaturesClick }) {
   const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate();
+  
+
   return (
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
@@ -19,22 +24,27 @@ function NavBar() {
         {" "}
         <div className="flex justify-between py-4 h-16 items-center ">
           {" "}
-          <div className="flex items-center space-x-2 cursor-pointer"               onClick={() => (window.location.href = "/")}
->
+          <div
+            className="flex items-center space-x-2 cursor-pointer"
+            onClick={() => (window.location.href = "/")}
+          >
             {" "}
-            <div
-              className="w-8 h-8 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg flex items-center justify-center text-black font-bold"
-            >
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg flex items-center justify-center text-black font-bold">
               {" "}
               ॐ{" "}
             </div>{" "}
             <span className="text-xl font-bold">संस्कृतम्</span>{" "}
           </div>{" "}
-          {/* desktop menu */}{" "}
+          {/* dsesktop menu */}{" "}
           <div className="hidden md:flex items-center space-x-8 text-[16px] mr-6">
             {" "}
             <a
               href="#features"
+              onClick={(e) => {
+                e.preventDefault();
+                onFeaturesClick();
+                setIsOpen(false);
+              }}
               className="text-gray-300 hover:text-blue-400 transition-colors relative group"
             >
               {" "}
@@ -50,11 +60,11 @@ function NavBar() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>{" "}
             </a>{" "}
             <a
-              href="#community"
+              href=""
               className="text-gray-300 hover:text-blue-400 transition-colors relative group"
+              onClick={() => navigate("/community")}
             >
-              {" "}
-              Community{" "}
+              Community
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>{" "}
             </a>{" "}
             <button className="mr-2">
@@ -88,10 +98,14 @@ function NavBar() {
               {" "}
               <a
                 href="#features"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onFeaturesClick();
+                  setIsOpen(false); // closes mobile nav after click
+                }}
                 className="text-gray-300 hover:text-blue-400 transition-colors"
               >
-                {" "}
-                Features{" "}
+                Features
               </a>{" "}
               <a
                 href="#docs"

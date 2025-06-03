@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useCallback } from "react";
 
 function NasaApproved() {
   return (
-    // <section className="bg-[#0b0c10] text-gray-200 py-16 px-6 md:px-20 border-t border-gray-700">
     <section className="bg-transparent text-gray-200 py-6 px-6 md:px-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-800/10 to-transparent"></div>
 
@@ -16,7 +15,7 @@ function NasaApproved() {
       >
         {/* Hero Headline */}
         <h2 className="text-3xl md:text-5xl font-bold text-white leading-snug text-center">
-          <span className=" text-blue-200 border border-blue-500 rounded-full px-4">
+          <span className="text-blue-200 border border-blue-500 rounded-full px-4">
             NASA-Approved
             <br />
           </span>
@@ -33,20 +32,18 @@ function NasaApproved() {
               verticalAlign: "middle",
             }}
           />{" "}
-          <span className="text-purple-300/90  rounded-full px-4 font-semibold border border-purple-500">
+          <span className="text-purple-300/90 rounded-full px-4 font-semibold border border-purple-500">
             Dev-Unverified
           </span>
         </h2>
 
-        {/* Fake Article Block */}
-        {/* <article className="bg-[#1a1c22] rounded-2xl p-6 md:p-10 shadow-xl border border-gray-800"> */}
         <article className="bg-[#0B0F11] rounded-2xl p-6 md:p-10 shadow-xl border border-gray-800">
           <header className="mb-4">
             <p className="text-sm text-gray-400">
               📰 *Indian ExpressTech* | June 2, 2025
             </p>
             <h3 className="text-xl md:text-2xl font-semibold text-white mt-2">
-              “Code Like a Rishi”: CM Gupta Launches Sanskrit IDE with NASA-ish
+              "Code Like a Rishi": CM Gupta Launches Sanskrit IDE with NASA-ish
               Approval
             </h3>
           </header>
@@ -59,13 +56,13 @@ function NasaApproved() {
             , Delhi CM Rekha Gupta claimed that Sanskrit was the
             <span className="italic text-teal-400">
               {" "}
-              “most logical programming language”
+              "most logical programming language"
             </span>{" "}
-            and that NASA had “basically built ChatGPT in it—back in '85”.
+            and that NASA had "basically built ChatGPT in it—back in '85".
           </p>
 
           <p className="mt-4 text-gray-400">
-            “Syntax so pure, even the semicolons meditate,” Gupta declared as
+            "Syntax so pure, even the semicolons meditate," Gupta declared as
             she live-coded a "Hello Vishwa" app. The IDE crashed—clearly a sign
             of enlightenment.
           </p>
@@ -96,20 +93,53 @@ function NasaApproved() {
             </pre>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="mt-8 flex flex-col md:flex-row gap-4">
+          {/* CTA Buttons - Fixed Link */}
+
+          
+{/* 
+           <div className="mt-8 flex flex-col md:flex-row gap-4">
             <a
               href="https://indianexpress.com/article/cities/delhi/delhi-cm-rekha-gupta-sanskrit-scientific-computer-friendly-language-nasa-papers-9982625/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-white text-black px-5 py-2 rounded-sm hover:bg-yellow-300 font-bold shadow-inner flex items-center gap-2"
+              className=" flex flex-row bg-white text-black md:px-12 px-6 py-2 rounded-sm hover:bg-yellow-300 font-bold shadow-inner  items-center gap-2"
             >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+              </svg>
               <span>Read Article</span>
             </a>
             <button className="border border-red-400 text-red-300 px-5 py-2 rounded-lg hover:bg-red-900/30 transition font-medium">
               View NASA Paper (Time Machine Required)
             </button>
-          </div>
+          </div> */}
+          <div className="mt-8 flex flex-col md:flex-row gap-3">
+  <a
+    href="https://indianexpress.com/article/cities/delhi/delhi-cm-rekha-gupta-sanskrit-scientific-computer-friendly-language-nasa-papers-9982625/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center gap-2 bg-white text-black px-6 py-2 md:px-8 rounded-sm hover:bg-yellow-300 font-bold shadow-inner transition-colors"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-4 w-4 md:h-5 md:w-5"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+    </svg>
+    <span className="text-sm md:text-base">Read Article</span>
+  </a>
+  <button className="border border-red-400 text-red-300 px-6 py-2 rounded-lg hover:bg-red-900/30 transition-colors font-medium text-sm md:text-base">
+    View NASA Paper  (Time Machine Required)
+  </button>
+</div>
+
         </article>
       </motion.div>
     </section>

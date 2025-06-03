@@ -1,8 +1,8 @@
-
 import React, { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from "react-hot-toast";
 
+import { useNavigate } from "react-router-dom";
 
 import "./App.css";
 
@@ -15,18 +15,24 @@ import Footer from "./components/footer/Footer.jsx";
 
 function App() {
   const codeEditorRef = useRef(null);
+  const featuresRef = useRef(null);
   const [mounted, setMounted] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
+  // Improved scroll functions with better control
   const scrollToEditor = () => {
     codeEditorRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const { scrollYProgress } = useScroll();
+  const scrollToFeatures = () => {
+  featuresRef.current?.scrollIntoView({ behavior: "smooth" });
+};
 
+  const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.8]);
 
@@ -35,9 +41,9 @@ function App() {
       className="min-h-screen bg-[#0B0F11] text-white overflow-x-hidden"
       style={{ overflowY: "scroll" }} // force scrollbar always visible
     >
-      <NavBar />
-            <Toaster position="bottom-right" reverseOrder={false} />
-
+      <NavBar   onFeaturesClick={scrollToFeatures}
+ />
+      <Toaster position="bottom-right" revxerseOrder={false} />
 
       {mounted ? (
         <motion.div style={{ opacity, scale }}>
@@ -47,7 +53,7 @@ function App() {
         <HeroSection onTryClick={scrollToEditor} />
       )}
 
-      <FeatureSection />
+      <FeatureSection ref={featuresRef} id="features" />
 
       <section
         className="py-20 px-4 relative"
@@ -81,7 +87,7 @@ function App() {
 
       <NasaApproved />
 
-      <Footer/>
+      <Footer />
     </div>
   );
 }
