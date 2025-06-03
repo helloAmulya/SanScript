@@ -38,8 +38,7 @@ Behold **SanScript** - where ancient mantras meet modern `console.log()`. This *
 
 ## 🌐 Preview
 
-Experience this groundbreaking tech:  
-**Preview Link (Coming after the next Yuga)**
+ - SanScript *(https://sanscript.vercel.app/)*
 
 ---
 
