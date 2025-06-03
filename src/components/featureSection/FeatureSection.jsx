@@ -80,7 +80,7 @@ const FeatureSection = forwardRef((props, ref) => {
     <section
       ref={ref}
       id="features"
-      className="py-20 px-4 bg-[#101418] border-t border-gray-700/30 relative"
+      className="py-20 px-4 bg-[#0B0F11]  relative"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-800/10 to-transparent"></div>
       <div className="max-w-7xl mx-auto relative z-10">

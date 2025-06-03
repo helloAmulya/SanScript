@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 import "./App.css";
 
-import NavBar from "./components/navbar/Navbar.jsx"
+import NavBar from "./components/navbar/NavBar.jsx"
 import HeroSection from "./components/heroSection/HeroSection.jsx";
 import NasaApproved from "./components/acknowledge/NasaApproved.jsx";
 import FeatureSection from "./components/featureSection/FeatureSection.jsx";

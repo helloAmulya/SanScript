@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Download, Mail, Github, Twitter } from "lucide-react";
+import { Download, Mail, Github, Twitter, WineOff } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import daddy from "../../assets/daddy.png";
 
@@ -90,7 +90,7 @@ export default function Footer() {
 
               <button
                 className="backdrop-blur-md bg-[#AAECDA]/10 border border-[#AAECDA]/30 text-[#AAECDA] hover:text-white transition-colors duration-300 rounded-full px-6 py-3 text-base sm:text-lg flex items-center justify-center w-full sm:w-auto shadow-lg"
-                onClick={() => navigate("/docs")}
+                onClick={() => window.open("https://github.com/helloAmulya/SanScript")}
               >
                 <Github className="mr-2 w-5 h-5" />
                 View Documentation
