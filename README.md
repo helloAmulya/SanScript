@@ -1,12 +1,56 @@
-# React + Vite
+# संस्कृतम् | SanScript: The New Gen
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Project Banner](src/assets/SansImg.png)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 About This *Totally Serious* Project
 
-## Expanding the ESLint configuration
+Behold **SanScript** - where ancient mantras meet modern `console.log()`. This *educational* (read: hilarious) playground lets you:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Write "code" in Sanskrit keywords (because `if` is so 20th century)
+- Pretend you're a NASA linguist from that *one* 1985 paper
+- Marvel at how `प्रिंट("नमस्ते")` somehow outputs to browser console
+
+```javascript
+// Real* Sanskrit Programming Example
+प्रकार्यम् factorial(अंकः n) {
+  यदि (n == ०) {
+    वापसी १;
+  } अन्यथा {
+    वापसी n * factorial(n - १);
+  }
+}
+// *Not actually real
+```
+
+
+## 💻 Tech Stack (The Real Stuff)
+
+| What's Working    | What's Allegedly Working          |
+|------------------|---------------------------------|
+| React 18         | Vedic JavaScript Interpreter™   |
+| Framer Motion    | Chakra Alignment Engine          |
+| Tailwind CSS     | Ancient Sanskrit CSS Rishi       |
+| Vite             | Yajna-powered HMR                |
+
+---
+
+## 🌐 Preview
+
+Experience this groundbreaking tech:  
+**Preview Link (Coming after the next Yuga)**
+
+---
+
+## Why This Exists
+
+Because someone actually claimed Sanskrit is better for programming
+
+To see if **वापसी** feels more enlightened than **return**
+
+---
+
+## Future Plans
+
+- Sanskrit-based OS kernels (because why not? 😄)

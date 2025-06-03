@@ -86,8 +86,8 @@ function App() {
       </section>
 
       <NasaApproved />
-
       <Footer />
+
     </div>
   );
 }

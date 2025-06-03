@@ -4,7 +4,7 @@ import React, { useCallback } from "react";
 function NasaApproved() {
   return (
     <section className="bg-transparent text-gray-200 py-6 px-6 md:px-20 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-800/10 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-800/10 to-transparent  pointer-events-none"></div>
 
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -96,30 +96,9 @@ function NasaApproved() {
           {/* CTA Buttons - Fixed Link */}
 
           
-{/* 
-           <div className="mt-8 flex flex-col md:flex-row gap-4">
-            <a
-              href="https://indianexpress.com/article/cities/delhi/delhi-cm-rekha-gupta-sanskrit-scientific-computer-friendly-language-nasa-papers-9982625/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className=" flex flex-row bg-white text-black md:px-12 px-6 py-2 rounded-sm hover:bg-yellow-300 font-bold shadow-inner  items-center gap-2"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
-              </svg>
-              <span>Read Article</span>
-            </a>
-            <button className="border border-red-400 text-red-300 px-5 py-2 rounded-lg hover:bg-red-900/30 transition font-medium">
-              View NASA Paper (Time Machine Required)
-            </button>
-          </div> */}
+
           <div className="mt-8 flex flex-col md:flex-row gap-3">
-  <a
+  {/* <a
     href="https://indianexpress.com/article/cities/delhi/delhi-cm-rekha-gupta-sanskrit-scientific-computer-friendly-language-nasa-papers-9982625/"
     target="_blank"
     rel="noopener noreferrer"
@@ -134,7 +113,36 @@ function NasaApproved() {
       <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
     </svg>
     <span className="text-sm md:text-base">Read Article</span>
-  </a>
+  </a> */}
+
+  <a
+  href="https://indianexpress.com/article/cities/delhi/delhi-cm-rekha-gupta-sanskrit-scientific-computer-friendly-language-nasa-papers-9982625/"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={(e) => {
+    // fallback: try to force open in new tab (some React setups intercept anchor clicks)
+    try {
+      window.open(e.currentTarget.href, "_blank", "noopener,noreferrer");
+      e.preventDefault();
+    } catch (error) {
+      console.error("Failed to open link:", error);
+    }
+  }}
+  className="flex items-center justify-center gap-2 bg-white text-black px-6 py-2 md:px-8 rounded-sm hover:bg-yellow-300 font-bold shadow-inner transition-colors"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-4 w-4 md:h-5 md:w-5"
+    viewBox="0 0 20 20"
+    fill="currentColor"
+  >
+    <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+  </svg>
+  <span className="text-sm md:text-base">Read Article</span>
+</a>
+
+
+
   <button className="border border-red-400 text-red-300 px-6 py-2 rounded-lg hover:bg-red-900/30 transition-colors font-medium text-sm md:text-base">
     View NASA Paper  (Time Machine Required)
   </button>
