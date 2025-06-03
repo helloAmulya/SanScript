@@ -19,7 +19,7 @@ function NavBar() {
         {" "}
         <div className="flex justify-between py-4 h-16 items-center ">
           {" "}
-          <div className="flex items-center space-x-2"               onClick={() => (window.location.href = "/")}
+          <div className="flex items-center space-x-2 cursor-pointer"               onClick={() => (window.location.href = "/")}
 >
             {" "}
             <div

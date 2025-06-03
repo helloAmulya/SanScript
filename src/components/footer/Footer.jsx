@@ -56,15 +56,17 @@ export default function Footer() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center sm:items-stretch">
-  <button className=" bg-gradient-to-r from-gray-900 to-[#0D1114] hover:bg-gray-400  rounded-full text-white px-6 py-3 text-base sm:text-lg flex items-center justify-center w-full sm:w-auto">
-    <Download className="mr-2 w-5 h-5" />
-    Special Message
-  </button>
+  <button className="backdrop-blur-md bg-white/10 border border-white/20 hover:bg-white/20  hover:text-[#AAECDA] transition-colors duration-300 rounded-full text-white px-6 py-3 text-base sm:text-lg flex items-center justify-center w-full sm:w-auto shadow-lg">
+  <Download className="mr-2 w-5 h-5" />
+  Special Message
+</button>
+
   
-  <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-black rounded-full px-6 py-3 text-base sm:text-lg flex items-center justify-center w-full sm:w-auto">
-    <Github className="mr-2 w-5 h-5" />
-    View Documentation
-  </button>
+ <button className="backdrop-blur-md bg-[#AAECDA]/10 border border-[#AAECDA]/30 text-[#AAECDA]  hover:text-white transition-colors duration-300 rounded-full px-6 py-3 text-base sm:text-lg flex items-center justify-center w-full sm:w-auto shadow-lg">
+  <Github className="mr-2 w-5 h-5" />
+  View Documentation
+</button>
+
 </div>
 
           </motion.div>

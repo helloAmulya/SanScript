@@ -16,8 +16,25 @@ function NasaApproved() {
       >
         {/* Hero Headline */}
         <h2 className="text-3xl md:text-5xl font-bold text-white leading-snug text-center">
-          <span className=" bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
-            NASA-Backed, <br /> CM-Certified, Dev-Unverified
+          <span className=" text-blue-200 border border-blue-500 rounded-full px-4">
+            NASA-Approved
+            <br />
+          </span>
+          <span className="inline-block text-white font-semibold">
+            मुख्यमंत्री प्रमाणित
+          </span>
+          <span
+            className="mx-2 px-0 ml-5"
+            style={{
+              display: "inline-block",
+              borderLeft: "2px solid rgba(251 146 60 / 0.9)",
+              height: "3rem",
+              width: "1px",
+              verticalAlign: "middle",
+            }}
+          />{" "}
+          <span className="text-purple-300/90  rounded-full px-4 font-semibold border border-purple-500">
+            Dev-Unverified
           </span>
         </h2>
 
@@ -81,9 +98,14 @@ function NasaApproved() {
 
           {/* CTA Buttons */}
           <div className="mt-8 flex flex-col md:flex-row gap-4">
-            <button className="bg-yellow-400 text-black px-5 py-2 rounded-lg hover:bg-yellow-300 transition font-bold shadow-inner">
-              Download Sanskrit SDK
-            </button>
+            <a
+              href="https://indianexpress.com/article/cities/delhi/delhi-cm-rekha-gupta-sanskrit-scientific-computer-friendly-language-nasa-papers-9982625/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-black px-5 py-2 rounded-sm hover:bg-yellow-300 font-bold shadow-inner flex items-center gap-2"
+            >
+              <span>Read Article</span>
+            </a>
             <button className="border border-red-400 text-red-300 px-5 py-2 rounded-lg hover:bg-red-900/30 transition font-medium">
               View NASA Paper (Time Machine Required)
             </button>

@@ -184,7 +184,7 @@ function HeroSection({ onTryClick }) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }} // Starts after paragraph
-            className="flex items-center gap-2 bg-[#1E685F] text-white hover:bg-[#207E73] px-6 py-2 rounded-full text-base font-medium backdrop-blur-md transition-all duration-300 shadow-md hover:shadow-[#12A594]"
+            className="flex items-center gap-2 bg-[#1E685F] text-white hover:bg-[#207E73] px-6 py-2 rounded-full text-base font-medium backdrop-blur-md transition-all duration-300 shadow-md hover:shadow-[#0d2b27]"
           >
             <CodeSandboxLogoIcon className="w-5 h-5" />
             {/* <span>Try Sanskrit Code</span> */}
