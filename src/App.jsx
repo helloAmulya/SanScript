@@ -23,7 +23,7 @@ function App() {
     setMounted(true);
   }, []);
 
-  // Improved scroll functions with better control
+
   const scrollToEditor = () => {
     codeEditorRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -39,7 +39,7 @@ function App() {
   return (
     <div
       className="min-h-screen bg-[#0B0F11] text-white overflow-x-hidden"
-      style={{ overflowY: "scroll" }} // force scrollbar always visible
+      style={{ overflowY: "scroll" }} 
     >
       <NavBar   onFeaturesClick={scrollToFeatures}
  />
