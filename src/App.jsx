@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div
-      className="min-h-screen bg-[#0B0F11] text-white overflow-x-hidden"
+      className="min-h-screen bg-[#0B0F11] text-white overflow-x-hidden pb-24 md:pb-0"
       style={{ overflowY: "scroll" }} 
     >
       <NavBar   onFeaturesClick={scrollToFeatures}

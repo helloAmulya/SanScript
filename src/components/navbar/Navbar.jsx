@@ -52,7 +52,7 @@ function NavBar({ onFeaturesClick }) {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>{" "}
             </a>{" "}
             <a
-              href="#docs"
+              onClick={() => navigate("/docs")}
               className="text-gray-300 hover:text-blue-400 transition-colors relative group"
             >
               {" "}
@@ -67,10 +67,11 @@ function NavBar({ onFeaturesClick }) {
               Community
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>{" "}
             </a>{" "}
-            <button className="mr-2">
-              {" "}
+            <a className="mr-2" href="https://github.com/helloAmulya/SanScript"
+            >
+              
               <GitHubLogoIcon className="w-7 h-7 text-[#ADF0DD] hover:text-[#8ADCC5] " />{" "}
-            </button>{" "}
+            </a>{" "}
           </div>{" "}
           {/* desktop div end */}{" "}
           <button
@@ -101,30 +102,31 @@ function NavBar({ onFeaturesClick }) {
                 onClick={(e) => {
                   e.preventDefault();
                   onFeaturesClick();
-                  setIsOpen(false); // closes mobile nav after click
+                  setIsOpen(false); 
                 }}
                 className="text-gray-300 hover:text-blue-400 transition-colors"
               >
                 Features
               </a>{" "}
               <a
-                href="#docs"
+              onClick={() => navigate("/docs")}
                 className="text-gray-300 hover:text-blue-400 transition-colors"
               >
                 {" "}
                 Docs{" "}
               </a>{" "}
               <a
-                href="#community"
+              onClick={() => navigate("/community")}
                 className="text-gray-300 hover:text-blue-400 transition-colors"
               >
                 {" "}
                 Community{" "}
               </a>{" "}
-              <button>
+            <a className="mr-2" href="https://github.com/helloAmulya/SanScript"
+              >
                 {" "}
                 <GitHubLogoIcon className="w-7 h-7 text-[#ADF0DD] hover:text-[#8ADCC5]" />{" "}
-              </button>{" "}
+              </a>{" "}
             </div>{" "}
           </motion.div>
         )}{" "}

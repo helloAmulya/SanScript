@@ -10,14 +10,12 @@ import { CodeSandboxLogoIcon, Link1Icon } from "@radix-ui/react-icons";
 function HeroSection({ onTryClick }) {
   return (
     <section className="min-h-screen flex items-start justify-center px-4 pt-20 relative overflow-hidden">
-      {/* bg blur effect - These are purely CSS animations and are fine as is */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800/20 via-[#0B0F11] to-[#0B0F11]"></div>
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-600/5 to-cyan-600/5 rounded-full blur-3xl"></div>
 
       <div className=" flex flex-col items-center max-w-6xl mx-auto text-center relative z-10 md:mt-8 mt-14">
-        {/* Badge Animation - This is correctly animated with motion.div */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -28,7 +26,6 @@ function HeroSection({ onTryClick }) {
           Ancient Wisdom, Modern Syntax
         </motion.div>
 
-        {/* AnimatedText components - Ensure their internal logic handles animation */}
         <div className="mb-8">
           <AnimatedText
             text="संस्कृतम्"
@@ -41,7 +38,6 @@ function HeroSection({ onTryClick }) {
           />
         </div>
 
-        {/* Paragraph Animation - Correctly animated with motion.p */}
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -64,7 +60,6 @@ function HeroSection({ onTryClick }) {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-          {/* Filled style button */}
           <motion.button
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -72,7 +67,6 @@ function HeroSection({ onTryClick }) {
             className="flex items-center gap-2 bg-[#1E685F] text-white hover:bg-[#207E73] px-6 py-2 rounded-full text-base font-medium backdrop-blur-md transition-all duration-300 shadow-md hover:shadow-[#0d2b27]"
           >
             <CodeSandboxLogoIcon className="w-5 h-5" />
-            {/* <span>Try Sanskrit Code</span> */}
             <a
               href="#code-editor"
               onClick={(e) => {
@@ -85,7 +79,6 @@ function HeroSection({ onTryClick }) {
             </a>
           </motion.button>
 
-          {/* Outlined style button */}
           <motion.button
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

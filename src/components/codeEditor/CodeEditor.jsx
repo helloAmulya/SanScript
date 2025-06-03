@@ -70,7 +70,6 @@ function CodeEditor() {
       );
     });
 
-    // Then apply language-specific transformations
     switch (targetLanguage) {
       case "javascript":
         return translatedCode
