@@ -1,4 +1,5 @@
 
+
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
@@ -14,20 +15,16 @@ function Community() {
     return () => {
       document.head.removeChild(link);
     };
-  }, []); // Empty dependency array ensures this runs only once on mount.
+  }, []);
 
   return (
     <motion.div
-      // Animation properties for smooth entry and exit.
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.5 }}
       id="community"
-      // Tailwind CSS classes for styling: dark background, white text,
-      // minimum screen height, and hidden horizontal overflow.
       className="min-h-screen bg-[#0B0F11] text-white overflow-x-hidden px-6 py-12"
-      // Inline style for vertical scrollability and font family.
       style={{ overflowY: "scroll", fontFamily: "'IBM Plex Sans', sans-serif" }}
     >
       <div className="max-w-4xl mx-auto flex flex-col items-center justify-start">
@@ -36,15 +33,19 @@ function Community() {
         </h3>
 
         <p className="text-lg leading-relaxed mb-6">
-          from the Ceo of daddyCorp and a vibe coder prodigy of this great nation :
+          from the Ceo of daddyCorp and a vibe coder prodigy of this great nation:
         </p>
 
         <p className="mb-4">
           Before declaring Sanskrit as the “most scientific” and “computer-friendly” language — a claim allegedly backed by NASA scientists — might we suggest a modest proposal?
         </p>
 
-        <p className="mb-4 italic">
-          <b>Consult an IT technician.</b> Yes, one of those elusive professionals who spend actual hours debugging real code, not reciting verses from ancient scripts.
+        <p
+          className="mb-6 text-2xl font-extrabold text-yellow-400 italic border-l-4 border-yellow-400 pl-4"
+          style={{ lineHeight: 1.3 }}
+        >
+          <b>Consult an IT technician.</b> <br />
+          Yes, one of those elusive professionals who spend actual hours debugging real code, not reciting verses from ancient scripts.
         </p>
 
         <p className="mb-4">
